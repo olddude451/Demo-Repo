@@ -24,7 +24,12 @@
   <div class=" contact-box">
   <div class="row">
     <form name="ContactDemo" method="POST" data-netlify="true" class="col s10">
-      <input type="hidden" name="form-name" value="ContactDemo.html" />
+      <form name="ContactDemo" netlify netlify-honeypot="bot-field" hidden>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <textarea name="message"></textarea>
+      </form>
+      <input type="hidden" name="form-name" value="ContactDemo" />
       <div class="row">
         <div class="input-field col s12">
           <i class="material-icons prefix">account_circle</i>
